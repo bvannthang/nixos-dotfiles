@@ -1,0 +1,9 @@
+[user]
+    name = buivanthang
+    email = shareai361867@gmail.com
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true
