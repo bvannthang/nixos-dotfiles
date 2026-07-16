@@ -14,7 +14,7 @@
       nixosConfigurations.nixos-vm = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./configuration.nix
+          ./hosts/vm/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
