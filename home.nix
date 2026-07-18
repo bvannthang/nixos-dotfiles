@@ -17,7 +17,6 @@ in
 {
   home.username = "bvannthang";
   home.homeDirectory = "/home/bvannthang";
-  programs.git.enable = true;
   home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
@@ -25,6 +24,7 @@ in
   xdg.configFile = builtins.mapAttrs
     (name: subpath: {
       source = create_symlink "${dotfiles}/${subpath}";
+      recursive = true;
     })
     configs;
 
