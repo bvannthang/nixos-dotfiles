@@ -39,6 +39,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
   services.displayManager.ly.enable = true;
 
+  environment.pathsToLink = [ "/libexec" ];
   services.xserver = {
     enable = true;
 

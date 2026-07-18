@@ -17,6 +17,7 @@ in
 {
   home.username = "bvannthang";
   home.homeDirectory = "/home/bvannthang";
+  programs.git.enable = true;
   home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
@@ -29,6 +30,5 @@ in
     configs;
 
   home.packages = with pkgs; [
-    alacritty
   ];
 }
