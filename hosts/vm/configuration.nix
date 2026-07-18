@@ -39,12 +39,17 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
   services.displayManager.ly.enable = true;
 
-  environment.pathsToLink = [ "/libexec" ];
+  # environment.pathsToLink = [ "/libexec" ];
   services.xserver = {
     enable = true;
 
     desktopManager = {
       xterm.enable = false;
+       xfce = {
+        enable = true;
+        noDesktop = true;
+        enableXfwm = false;
+      };
     };
    
     windowManager.i3 = {
@@ -52,6 +57,7 @@
       extraPackages = with pkgs; [
         dmenu
         i3status
+        i3lock
       ];
     };
 
@@ -63,9 +69,10 @@
     };
   };
 
-  services.displayManager.defaultSession = "none+i3";
+  services.displayManager.defaultSession = "xfce";
 
   programs.i3lock.enable = true; #default i3 screen locker
+  security.pam.services.i3lock.enable = true;
 
   virtualisation.vmware.guest.enable = true;
 
