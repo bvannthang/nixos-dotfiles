@@ -15,8 +15,8 @@ let
 in
 
 {
-  home.username = "buivanthang";
-  home.homeDirectory = "/home/buivanthang";
+  home.username = "bvannthang";
+  home.homeDirectory = "/home/bvannthang";
   home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;

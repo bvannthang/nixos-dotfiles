@@ -14,7 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos-vm";
+  networking.hostName = "nixos-vm-workspace";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Asia/Ho_Chi_Minh";
@@ -85,7 +85,7 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."buivanthang" = {
+  users.users."bvannthang" = {
     isNormalUser = true;
     description = "buivanthang";
     extraGroups = [ "networkmanager" "wheel" ];

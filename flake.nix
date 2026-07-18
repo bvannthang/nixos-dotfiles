@@ -11,7 +11,7 @@
     let
       system = "x86_64-linux";
     in {
-      nixosConfigurations.nixos-vm = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.nixos-vm-workspace = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ./hosts/vm/configuration.nix
@@ -19,7 +19,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.buivanthang = import ./home.nix;
+            home-manager.users.bvannthang = import ./home.nix;
             home-manager.backupFileExtension = "backup";
           }
         ];
